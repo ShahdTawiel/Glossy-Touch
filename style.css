@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    list-style: none;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 15%, #16213e 35%, #0f3460 50%, #533a7d 70%, #8b5a8c 85%, #a0616a 100%);
+    padding: 30px 50px 75px 50px;
+}
+.logo{
+    display: flex;
+}
+.logo svg{
+    width: 50px;
+}
+header , header ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.glass{
+    padding: 35px 50px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: 0.3s ease;
+    top: 0;
+    margin-bottom: 50px;
+}
+.glass:hover{
+    top: -10px;
+    background: rgba(255, 255, 255, 0.2);
+}
+header ul li{
+    padding: 0 10px;
+}
+header ul li a{
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+    border-radius: 5px;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+header ul li a.active , header ul li a:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
+.homeSec{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.homeSec img{
+    width: 400px;
+    border-radius: 20px;
+}
+.homeSec .homeInfo{
+    padding: 0 50px;
+}
+.homeSec .homeInfo h2{
+    font-size: 30px;
+    line-height: 50px;
+}
+.homeSec .homeInfo p{
+    font-size: 20px;
+    font-weight: 200;
+    padding-bottom: 15px;
+}
+.homeSec .homeInfo button{
+    padding: 15px 40px;
+    cursor: pointer;
+}
+.cardSec .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+.cardSec .cards .card h2:first-child{
+    width: 55px;
+    height: 55px;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0 auto;
+}
+.cardSec .cards .card h2:last-of-type{
+    line-height: 60px;
+}
+footer{
+    width: 100%;
+    text-align: center;
+}
+footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    line-height: 50px;
+}
+footer p{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* responsive*/
+@media only screen and (max-width:1014px){
+    .cardSec .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width:900px){
+    .homeSec img{
+        width: 300px;
+    }
+}
+@media only screen and (max-width:770px){
+    header , header ul , .homeSec{
+        display: block;
+        text-align: center;
+    }
+    header ul li{
+        line-height: 60px;
+    }
+    .homeSec img{
+        width: 400px;
+    }
+}
+@media only screen and (max-width:680px){
+    footer ul{
+        display: block;
+        text-align: center;
+    }
+    .homeSec img{
+        width: 300px;
+    }
+    .cardSec .cards{
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (max-width:500px){
+    .homeSec img{
+        width: 200px;
+    }
+    .glass{
+        padding: 25px;
+    }
+}
