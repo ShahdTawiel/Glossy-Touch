@@ -97,6 +97,78 @@ header ul li a.active , header ul li a:hover{
 .cardSec .cards .card h2:last-of-type{
     line-height: 60px;
 }
+
+/*about section*/
+.aboutSec , .aboutCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    text-align: center;
+    align-items: center;
+}
+.aboutInfo h2{
+    font-size: 30px;
+    line-height: 50px;
+}
+.aboutInfo p{
+    text-align: left;
+    line-height: 30px;
+}
+.aboutCards .glass{
+    padding: 30px;
+}
+.aboutCards .glass h2{
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 900;
+}
+.teamSec{
+    text-align: center;
+}
+.teamSec h1{
+    font-size: 40px;
+    padding: 35px 0 50px 0;
+}
+.teamCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.teamCards .glass h2{
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    font-size: 30px;
+    border-radius: 50%;
+    margin: 0 auto 25px auto;
+    background: rgba(255, 255, 255, 0.2);
+    border: solid 3px rgba(255, 255, 255, 0.4);
+    transition: 0.3s ease;
+}
+.teamCards .glass:hover h2{
+    scale: 1.1;
+    background: rgba(255, 255, 255, 0.3);
+}
+.teamCards .glass h3{
+    line-height: 35px;
+}
+.teamCards .glass p:first-of-type{
+    opacity: 0.6;
+    line-height: 35px;
+}
+.teamCards .glass p:last-of-type{
+    margin-bottom: 30px;
+}
+.teamCards .glass span{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
+
+
 footer{
     width: 100%;
     text-align: center;
@@ -121,10 +193,20 @@ footer p{
     .cardSec .cards{
         grid-template-columns: 1fr 1fr;
     }
+    .teamCards{
+        grid-template-columns: 1fr 1fr;
+    }
 }
-@media only screen and (max-width:900px){
+@media only screen and (max-width:950px){
     .homeSec img{
         width: 300px;
+    }
+    .aboutCards{
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+    .aboutCards .glass{
+        margin-bottom:20px;
     }
 }
 @media only screen and (max-width:770px){
@@ -137,6 +219,16 @@ footer p{
     }
     .homeSec img{
         width: 400px;
+    }
+    .aboutSec{
+        grid-template-columns: 1fr;
+    }
+    .aboutCards{
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .teamCards{
+        grid-template-columns: 1fr;
     }
 }
 @media only screen and (max-width:680px){
@@ -157,5 +249,8 @@ footer p{
     }
     .glass{
         padding: 25px;
+    }
+    .aboutCards{
+        grid-template-columns: 1fr;
     }
 }
