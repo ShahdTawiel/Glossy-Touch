@@ -165,10 +165,129 @@ header ul li a.active , header ul li a:hover{
     border-radius: 50%;
     padding: 10px;
 }
-
-
-
-
+/*services section*/
+.servicesSec{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+}
+.servicesSec h2{
+    font-size: 40px;
+    margin:20px; 
+    text-wrap-mode: nowrap;
+}
+.servicesSec p{
+    font-size: 18px;
+}
+.servicesCards ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+.servicesCards ul li h3 span{
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.servicesCards ul li h3{
+    font-size: 20px;
+    line-height: 60px;
+}
+.servicesCards ul li p{
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+.servicesCards ul li ol li{
+    line-height: 25px;
+    opacity: 0.7;
+}
+.servicesCards ul li ol li i{
+    margin-right: 5px;
+}
+/*contact section*/
+.contactSec{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.contactSec form{
+    display: grid;
+    gap: 5px;
+}
+.contactSec form h2 , .contactInfo h2 , .map h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.contactSec form input , .contactSec form textarea{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+}
+.contactSec form input::placeholder , .contactSec form textarea::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+.contactSec form label{
+    font-size: 18px;
+    opacity: 0.9;
+}
+.contactSec form button{
+    width: 200px;
+    font-size: 15px;
+    padding: 15px;
+    border: 1px solid #fff;
+}
+.contactSec .contactInfo .info{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.contactSec .contactInfo .info span{
+    font-size: 20px;
+    padding: 11px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.contactSec .contactInfo .info h5{
+    font-size: 18px;
+}
+.contactSec .contactInfo .info p{
+    font-size: 15px;
+    opacity: 0.8;
+}
+.map{
+    text-align: center;
+}
+.map div{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px 0;
+    border-radius: 20px;
+}
+.map div h3{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.map div h4{
+    opacity: 0.9;
+    line-height: 30px;
+    font-size: 20px;
+}
+.map div p{
+    line-height: 30px;
+    opacity: 0.8;
+}
+.map div small{
+    display: block;
+    line-height: 15px;
+    opacity: 0.7;
+    font-size: 11px;
+}
 footer{
     width: 100%;
     text-align: center;
@@ -186,9 +305,12 @@ footer p{
     padding: 10px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
-
-
 /* responsive*/
+@media only screen and (max-width:1100px){ 
+    .servicesCards ul{
+    grid-template-columns: 1fr 1fr;
+    }
+}
 @media only screen and (max-width:1014px){
     .cardSec .cards{
         grid-template-columns: 1fr 1fr;
@@ -230,7 +352,17 @@ footer p{
     .teamCards{
         grid-template-columns: 1fr;
     }
-}
+    .servicesSec{
+        display: block;
+        text-align: center;
+    }
+    .servicesCards ul{
+    grid-template-columns: 1fr;
+    }
+    .contactSec{
+        grid-template-columns: 1fr;
+    }
+}   
 @media only screen and (max-width:680px){
     footer ul{
         display: block;
